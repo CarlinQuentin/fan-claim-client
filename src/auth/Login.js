@@ -28,25 +28,24 @@ class Login extends Component{
         }).then(
             (response) => response.json()
         ).then((data) => {
-            this.props.auth.setToken(data.sessionToken)
-            this.props.auth.setEmail(this.state.email)
+            this.props.setToken(data.sessionToken)
         })
-        e.preventDefault()
-    }
+        e.preventDefault();
+        }
 
     render() {
         return(
             <div>
                 <h1>Login</h1>
-                <h6>Fill out form to log in</h6>
-                    <Form onSubmit={this.handelSubmit}>
+                <h4>Already have an account?</h4>
+                    <Form onSubmit={this.handelSubmit} className='form'>
                         <FormGroup>
                             <Label for='email'>Email</Label>
                             <Input id='li_email' type='email' name='email' placeholder='Enter Email' onChange={this.handleChange} />
                         </FormGroup>
                         <FormGroup>
                             <Label for='password'>Password</Label>
-                            <Input id='li_password' type='password' name='password' plcaeholder='Enter Password' onChange={this.handleChange} />
+                            <Input id='li_password' type='password' name='password' placeholder='Enter Password' onChange={this.handleChange} />
                         </FormGroup>
                         <Button type='submit' className='button'>Submit</Button>
                     </Form>

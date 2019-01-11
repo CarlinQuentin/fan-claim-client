@@ -1,0 +1,66 @@
+body{
+    background-image: radial-gradient(red, darkred, black);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.form{
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+input{
+    width: 20vw;
+    height: 3vh;
+    border: none;
+    padding: 0px;
+    margin: 0.5%;
+    border-radius: 17%;
+}
+
+label{
+    background-color: darkred;
+    color: white;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    height: 24px;
+    margin: 0.5%;
+    border-radius: 17%;
+    box-shadow: 3px 3px 10px 3px black;
+}
+
+.auth-container{
+    margin-top: 5em;
+    padding: 2em;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.4em;
+    box-shadow: 2px 4px 20px #f0f0f0;
+    background-color: lightgray;
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
+button{
+    display: inline;
+    /* width: 70px; */
+    background-color: darkred; 
+    color: white;
+    border-radius: 17%;
+    box-shadow: 3px 3px 10px 3px black;
+    border-color: darkred;
+}
+
+button:hover{
+    width: 80px;
+    box-shadow: 6px 6px 20px 6px black;
+}

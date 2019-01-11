@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import Auth from './auth/Auth'
+import FullAuth from './auth/FullAuth'
 import './App.css';
 import {AuthContext} from './auth/AuthContext'
+
 
 import {
   BrowserRouter as Router,
   Route,
   Switch
 } from 'react-router-dom'
+
 
 class App extends Component {
 
@@ -17,10 +20,8 @@ class App extends Component {
       localStorage.setItem('token', token)
       this.setState({sessinToken : token})
     }
-    this.setEmail = (email) => {
-      localStorage.setItem('email', email)
-      this.setState({sessionEmail : email})
-    }
+
+
     this.state = {
       sessionToken: '',
       sessionEmail: '',
@@ -41,19 +42,24 @@ class App extends Component {
     this.setState({sessionToken: token });
   }
 
-  setSessionEmail = (specialEmail) => {
-    localStorage.setItem('email', specialEmail)
-    this.setState({ email: specialEmail})
+
+  logout = () => {
+    this.setState({
+      sessionToken: '',
+      sessionEmail: '',
+    }) 
+    localStorage.clear()
   }
+
 
   protectedViews = () => {
     if(this.state.sessionToken === localStorage.getItem('token') && this.state.sessionToken !== 'undefined' && this.state.sessionToken !== ''){
       return(
-        'This is a placeholder for full auth'
+        <FullAuth logOut={this.logout}/>
       )
     } else{
       return(
-        <Auth setToken={this.setSessionState} email={this.setSessionEmail} />
+        <Auth setToken={this.setSessionState}  />
       )
     }
   }
