@@ -24,9 +24,7 @@ class App extends Component {
 
     this.state = {
       sessionToken: '',
-      sessionEmail: '',
       setToken: this.setToken,
-      setEmail: this.setEmail
     }
   }
 
@@ -46,7 +44,6 @@ class App extends Component {
   logout = () => {
     this.setState({
       sessionToken: '',
-      sessionEmail: '',
     }) 
     localStorage.clear()
   }
@@ -55,7 +52,7 @@ class App extends Component {
   protectedViews = () => {
     if(this.state.sessionToken === localStorage.getItem('token') && this.state.sessionToken !== 'undefined' && this.state.sessionToken !== ''){
       return(
-        <FullAuth logOut={this.logout}/>
+        <FullAuth logout={this.logout} token={this.state.sessionToken}/>
       )
     } else{
       return(

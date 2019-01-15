@@ -55,12 +55,12 @@ button{
     /* width: 70px; */
     background-color: darkred; 
     color: white;
-    border-radius: 17%;
+    border-radius: 17% !important;
     box-shadow: 3px 3px 10px 3px black;
-    border-color: darkred;
+    border-color: darkred; 
 }
 
 button:hover{
-    width: 80px;
+    width: 10vw;
     box-shadow: 6px 6px 20px 6px black;
 }

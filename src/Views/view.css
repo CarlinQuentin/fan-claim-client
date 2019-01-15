@@ -1,0 +1,22 @@
+.a{
+    background-color: greenyellow
+}
+
+.t{
+    margin: 5%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70vw;
+}
+
+.card {
+    margin: 10%;
+    width: 80%;
+    display: table;
+    color: darkred;
+    height: 80%;
+}
+

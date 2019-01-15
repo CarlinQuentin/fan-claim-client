@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup } from 'reactstrap';
 import {AuthContext} from './AuthContext';
 
 
@@ -40,14 +40,14 @@ class Login extends Component{
                 <h4>Already have an account?</h4>
                     <Form onSubmit={this.handelSubmit} className='form'>
                         <FormGroup>
-                            <Label for='email'>Email</Label>
-                            <Input id='li_email' type='email' name='email' placeholder='Enter Email' onChange={this.handleChange} />
+                            <label for='email'>Email</label>
+                            <input id='li_email' type='email' name='email' placeholder='Enter Email' onChange={this.handleChange} />
                         </FormGroup>
                         <FormGroup>
-                            <Label for='password'>Password</Label>
-                            <Input id='li_password' type='password' name='password' placeholder='Enter Password' onChange={this.handleChange} />
+                            <label for='password'>Password</label>
+                            <input id='li_password' type='password' name='password' placeholder='Enter Password' onChange={this.handleChange} />
                         </FormGroup>
-                        <Button type='submit' className='button'>Submit</Button>
+                        <button type='submit' className='button'>Submit</button>
                     </Form>
             </div>
         )

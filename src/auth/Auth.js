@@ -1,19 +1,19 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, } from 'reactstrap';
 import Signup from './Signup';
 import Login from './Login';
 
 const Auth = (props) => {
     return(
         <Container className='auth-container'>
-            <Row>
-                <Col md='6'>
+            <div>
+                <div>
                     <Signup setToken={props.setToken} />
-                </Col>
-                <Col md='6' className='login-col'>
+                </div>
+                <div className='login-col'>
                     <Login setToken={props.setToken} />
-                </Col>
-            </Row>
+                </div>
+            </div>
         </Container>
      )
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup } from 'reactstrap';
 import { AuthContext } from './AuthContext';
 import '../auth/AllCss/auth.css';
 
@@ -70,30 +70,30 @@ class Signup extends Component {
                 <h4>New User?</h4>
                 <Form onSubmit={this.check} className='form' col-md='6'>
                     <FormGroup>
-                        <Label for='firstName'>First Name</Label>
-                        <Input id='firstName' type='text' name='firstName' placeholder='Enter First Name' onChange={this.handleChange} />
+                        <label for='firstName'>First Name</label>
+                        <input id='firstName' type='text' name='firstName' placeholder='Enter First Name' onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <Label for='lastName'> Last Name</Label>
-                        <Input id='lastName' type='text' name='lastName' placeholder='Enter Last Name' onChange={this.handleChange} />
+                        <label for='lastName'> Last Name</label>
+                        <input id='lastName' type='text' name='lastName' placeholder='Enter Last Name' onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <Label for='userName'> User Name</Label>
-                        <Input id='userName' type='text' name='userName' placeholder='Enter User Name' onChange={this.handleChange} />
+                        <label for='userName'> User Name</label>
+                        <input id='userName' type='text' name='userName' placeholder='Enter User Name' onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <Label for='email'>Email</Label>
-                        <Input id='email' type='text' name='email' placeholder='Enter Email' onChange={this.handleChange} />
+                        <label for='email'>Email</label>
+                        <input id='email' type='text' name='email' placeholder='Enter Email' onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <Label for='password'>Password</Label>
-                        <Input id='password' type='password' name='password' placeholder='Enter Password' onChange={this.handleChange} />
+                        <label for='password'>Password</label>
+                        <input id='password' type='password' name='password' placeholder='Enter Password' onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <Label for='password2'>Confirm Password</Label>
-                        <Input id='password2' type='password' name='password2' placeholder='Confirm Password' onChange={this.handleChange} />
+                        <label for='password2'>Confirm Password</label>
+                        <input id='password2' type='password' name='password2' placeholder='Confirm Password' onChange={this.handleChange} />
                     </FormGroup>
-                    <Button type='submit' className='button2'> Submit</Button>
+                    <button type='submit' className='button2'> Submit</button>
                 </Form>
             </div>
         )
